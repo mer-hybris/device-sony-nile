@@ -40,6 +40,8 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 
+BOARD_KERNEL_CMDLINE += selinux=0
+
 # Serial console
 #BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
 
