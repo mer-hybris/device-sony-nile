@@ -23,7 +23,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -43,10 +43,10 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += selinux=0
 
 # Serial console
-#BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000 androidboot.console=msm_serial_dm,0xc170000
+#BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000
 
 TARGET_RECOVERY_WIPE := $(PLATFORM_COMMON_PATH)/rootdir/recovery.wipe
-TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.nile
+TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.nile
 
 TARGET_PD_SERVICE_ENABLED := true
 
